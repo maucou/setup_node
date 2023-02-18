@@ -4,10 +4,9 @@ const app = express()
 const mongoose = require('mongoose')
 
 mongoose.connect(process.env.CONNECTIONSTRING, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then(() => {
-        console.log('Conectei a base')
+    .then(() => {        
         app.emit('pronto')
-    }).catch(e => console.log('e'))
+    }).catch(e => console.log(e))
 
 const routes = require('./routes')
 const path = require('path')
