@@ -1,4 +1,5 @@
 exports.paginaInicial = (req, res) => {
+    console.log(req.session.usuario)
     res.render('index')   
     return 
 }
