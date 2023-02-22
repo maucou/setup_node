@@ -1,6 +1,9 @@
 exports.paginaInicial = (req, res) => {
-    console.log(req.session.usuario)
-    res.render('index')   
+    
+    res.render('index', {
+        titulo: 'Este será o <span style="color:red">titulo </span> da página',
+        numeros: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    })   
     return 
 }
 
